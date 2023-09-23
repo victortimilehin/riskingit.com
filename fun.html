@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input your age and click button</p>
+
+    <label for="age"></label>
+    <input id="age" type="number" placeholder="your age">
+    <button class="btn1">click it</button>
+    <p id="demo"></p>
+    
+
+    
+
+</body>
+<script>
+let button = document.querySelector(".btn1")
+let demo = document.getElementById("demo")
+
+
+ button.addEventListener("click" ,function () {
+ let ageInput = document.getElementById("age").value
+let demo = document.getElementById("demo")
+let age = parseFloat(ageInput)
+if (age < 18) {
+    demo.textContent= "to young to vote"
+} 
+else {
+    demo.innerHTML = "old enough"
+}
+
+if (ageInput === "") {
+    demo.innerHTML =  "input a figure   "
+}
+
+}) 
+
+
+</script>
+</html>
